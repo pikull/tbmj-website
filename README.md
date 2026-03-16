@@ -1,3 +1,6 @@
+# Website for The BioMed Journal
+> Website by [Akshun Chinara](https://github.com/pikull) and [Atharv Rajure](https://github.com/RealBOOM123)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
