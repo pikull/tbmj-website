@@ -8,7 +8,7 @@ export default function Footer() {
           {" "}
           &copy;{" "}
           <Link
-            className="underline underline-offset-2 hover:underline-offset-4 transition-all duration-300"
+            className="underline underline-offset-2 hover:underline-offset-4 transition-all duration-200"
             href="mailto:thebiomedjournal@gmail.com"
           >
             The BioMed Journal
@@ -17,7 +17,7 @@ export default function Footer() {
         </span>
 
         <Link
-          className="hover:opacity-70 transition-all duration-300"
+          className="hover:opacity-70 transition-all duration-200"
           href="https://www.instagram.com/thebiomed_journal/"
           target="_blank"
         >
