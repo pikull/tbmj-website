@@ -23,7 +23,7 @@ export default function Header() {
           );
         })}
       </header>
-      <h1 className="flex w-full flex-col items-center justify-center mb-4 py-6 px-6 bg-[var(--soft-white)] text-[var(--dark-green)] text-5xl md:text-7xl font-extrabold text-center">
+      <h1 className="flex w-full flex-col mb-4 py-6 px-6 bg-[var(--soft-white)] text-[var(--dark-green)] text-5xl md:text-7xl font-extrabold text-center">
         The BioMed Journal
       </h1>
     </>
