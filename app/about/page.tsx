@@ -40,6 +40,7 @@ export default function Page() {
           { label: "Medium", url: "https://medium.com/@thebiomedjournal" },
         ]}
       />
+      <h2 className="text-4xl md:text-5xl mt-10 text-[var(--dark-green)] font-bold">Meet the Team</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-12 my-10">
         {TeamList.map((member, index) => (
           <TeamCard key={index} {...member} />
