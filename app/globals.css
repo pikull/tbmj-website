@@ -21,6 +21,10 @@
 /*   } */
 /* } */
 
+html {
+  background: var(--light-green);
+}
+
 body {
   background: var(--soft-white);
   color: var(--light-green);
