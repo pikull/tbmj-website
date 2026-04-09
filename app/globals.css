@@ -1,7 +1,8 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
-  --soft-white: #ededed;
+  --soft-white: #d8d8d8;
   --light-green: #8f9779;
   --dark-green: #384b45;
 }
@@ -28,5 +29,5 @@ html {
 body {
   background: var(--soft-white);
   color: var(--light-green);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
