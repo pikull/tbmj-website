@@ -12,7 +12,7 @@ interface LinkSectionProps {
 
 export default function LinkSection({ title, links }: LinkSectionProps) {
   return (
-    <section className="w-full flex flex-col items-center justify-center py-16 px-6 text-center text-[var(--soft-white)] bg-[var(--light-green)]">
+    <section className="mt-10 w-full flex flex-col items-center justify-center py-16 px-6 text-center text-[var(--soft-white)] bg-[var(--light-green)] rounded-3xl">
       <h2 className="text-4xl md:text-5xl font-bold mb-4">
         {title}
       </h2>

@@ -2,29 +2,39 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--light-green)] text-[var(--dark-green)] w-full mt-auto flex flex-col items-center py-2">
-      <div className="flex items-center gap-2">
-        <span className="text-sm">
-          {" "}
-          &copy;{" "}
-          <Link
-            className="underline underline-offset-2 hover:underline-offset-4 transition-all duration-200"
-            href="mailto:thebiomedjournal@gmail.com"
-          >
-            The BioMed Journal
-          </Link>{" "}
-          {new Date().getFullYear()}
-        </span>
+    <footer className="w-full mt-auto border-t border-[var(--dark-green)]/10 bg-[var(--light-green)] text-[var(--dark-green)]">
+      <div className="mx-auto max-w-screen-xl px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
+        
+        {/* Left side */}
+        <div className="text-sm text-center md:text-left">
+          <span>
+            &copy;{" "}
+            <Link
+              href="mailto:thebiomedjournal@gmail.com"
+              className="font-semibold underline underline-offset-2 hover:underline-offset-4 transition-all duration-200"
+            >
+              The BioMed Journal
+            </Link>{" "}
+            {new Date().getFullYear()}
+          </span>
+        </div>
 
+        {/* Center */}
+        <div className="text-sm font-medium tracking-wide">
+          ISSN: 3069-0773
+        </div>
+
+        {/* Right side */}
         <Link
-          className="hover:opacity-70 transition-all duration-200"
           href="https://www.instagram.com/thebiomed_journal/"
           target="_blank"
+          className="hover:opacity-70 transition-all duration-200 hover:scale-110"
+          aria-label="Instagram"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="14"
-            height="14"
+            width="18"
+            height="18"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
