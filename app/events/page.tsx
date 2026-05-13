@@ -11,7 +11,8 @@ const EVENTS_DATA = [
     // Toggle these to easily update the website:
     status: "upcoming", // "upcoming" or "past"
     signupsOpen: true, // true or false
-    airtableEmbedUrl: "https://airtable.com/embed/YOUR_FORM_ID_HERE?backgroundColor=green", // Add your real airtable URL here
+    airtableEmbedUrl: "https://airtable.com/embed/YOUR_FORM_ID_HERE?backgroundColor=green",
+    imageSrc: "", // e.g., "/events/ms-camp.jpg" (Make sure to put the image in public/events/)
     imagePlaceholder: "[ Middle School Camp Image Placeholder ]"
   },
   {
@@ -21,6 +22,7 @@ const EVENTS_DATA = [
     status: "upcoming",
     signupsOpen: false,
     airtableEmbedUrl: "", 
+    imageSrc: "", 
     imagePlaceholder: "[ HS Summer Project Image Placeholder ]"
   },
   {
@@ -30,6 +32,7 @@ const EVENTS_DATA = [
     status: "past",
     signupsOpen: false,
     airtableEmbedUrl: "",
+    imageSrc: "", // Add your path here when ready, e.g., "/events/dna-extraction.jpg"
     imagePlaceholder: "[ IHS DNA Extraction / Microscopy Image Placeholder ]"
   }
 ];
@@ -74,12 +77,21 @@ export default function Page() {
                       {event.description}
                     </p>
 
-                    {/* Image Placeholder (Only shown if no airtable form is open/provided to save space, or can be kept) */}
+                    {/* Image or Placeholder (Only shown if no airtable form is open/provided to save space) */}
                     {!event.signupsOpen && (
                       <div className="w-full aspect-video relative bg-gray-100 rounded-2xl overflow-hidden border border-[var(--light-green)]/30 mt-6">
-                        <div className="absolute inset-0 flex items-center justify-center text-sm text-gray-500 bg-gray-200">
-                          {event.imagePlaceholder}
-                        </div>
+                        {event.imageSrc ? (
+                          <Image
+                            src={event.imageSrc}
+                            alt={event.title}
+                            fill
+                            className="object-cover"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center text-sm text-gray-500 bg-gray-200">
+                            {event.imagePlaceholder}
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
@@ -121,9 +133,18 @@ export default function Page() {
                   <p className="opacity-90">{event.description}</p>
                 </div>
                 <div className="flex-1 w-full aspect-[4/3] relative bg-gray-100 rounded-2xl overflow-hidden border border-[var(--light-green)]/30">
-                  <div className="absolute inset-0 flex items-center justify-center text-sm text-gray-500 bg-gray-200">
-                    {event.imagePlaceholder}
-                  </div>
+                  {event.imageSrc ? (
+                    <Image
+                      src={event.imageSrc}
+                      alt={event.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-sm text-gray-500 bg-gray-200">
+                      {event.imagePlaceholder}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
